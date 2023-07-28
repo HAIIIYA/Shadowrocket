@@ -6,7 +6,20 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name:  warp,type: wireguard,server: 162.159.192.121,port: 1070,ip: 172.16.0.2,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,private-key: MDcviEZjyQ6G/Do4bZ/t+id7etPKEn0M3MQQPZzOEn8=,mtu: 1280,udp: true}
-  - {name:  tls1,type: vless,server: 162.159.160.212,port: 443,uuid: 995da843-51d3-470a-bc76-1794a46bb6f9,udp: true,tls: true,network: ws,servername: cf.flcl.link,ws-opts:path: "/?ed=2048",headers:Host: cf.flcl.link}
+  - name: "tls1"
+    type: vless
+    server: 162.159.160.212
+    port: 443
+    uuid: 995da843-51d3-470a-bc76-1794a46bb6f9
+    udp: true
+    tls: true
+    network: ws
+    servername: cf.flcl.link # priority over wss host
+    # skip-cert-verify: true
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: cf.flcl.link
   - name: "tls2"
     type: vless
     server: 66.235.200.167
