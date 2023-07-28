@@ -18,7 +18,7 @@ proxies:
     servername: cf.flcl.link # priority over wss host
     # skip-cert-verify: true
     ws-opts:
-      path: "/"
+      path: "/?ed=2048"
       headers:
         Host: cf.flcl.link
 
