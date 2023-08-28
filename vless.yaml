@@ -18,11 +18,11 @@ proxies:
   - {name: "11", type: vless, server: 8.222.140.87, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
   - {name: "12", type: vless, server: 8.222.254.91, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
 
-  - {name: "ym1", type: vless, server: www.csgo.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
-  - {name: "ym2", type: vless, server: shopify.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
-  - {name: "ym3", type: vless, server: www.glassdoor.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
-  - {name: "ym4", type: vless, server: www.visa.co.jp, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
-  - {name: "ym5", type: vless, server: www.visa.com.hk, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
+  - {name: "www.csgo.com", type: vless, server: www.csgo.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
+  - {name: "shopify.com", type: vless, server: shopify.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
+  - {name: "www.glassdoor.com", type: vless, server: www.glassdoor.com, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
+  - {name: "www.visa.co.jp", type: vless, server: www.visa.co.jp, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
+  - {name: "www.visa.com.hk", type: vless, server: www.visa.com.hk, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: "/?ed=2048", headers: {Host: cf.flcl.link}}}
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -41,7 +41,12 @@ proxy-groups:
       - 9
       - 10
       - 11
-
+      - 12
+      - www.csgo.com
+      - shopify.com
+      - www.glassdoor.com
+      - www.visa.co.jp
+      - www.visa.com.hk
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -59,88 +64,39 @@ proxy-groups:
       - 9
       - 10
       - 11
+      - 12
+      - www.csgo.com
+      - shopify.com
+      - www.glassdoor.com
+      - www.visa.co.jp
+      - www.visa.com.hk
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -157,17 +113,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
   - name: ♻️ chatGPT
     type: select
     proxies:
@@ -182,6 +127,12 @@ proxy-groups:
       - 9
       - 10
       - 11
+      - 12
+      - www.csgo.com
+      - shopify.com
+      - www.glassdoor.com
+      - www.visa.co.jp
+      - www.visa.com.hk
 
 rules:
  - DOMAIN-SUFFIX,ai.com,♻️ chatGPT
