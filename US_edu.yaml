@@ -50,7 +50,6 @@ proxies:
   - {name: "US43, type: vless, server: 188.114.98.126, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: /?ed=2048"", headers: {Host: cf.flcl.link}}}"
   - {name: "US44, type: vless, server: 188.114.98.157, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: /?ed=2048"", headers: {Host: cf.flcl.link}}}"
   - {name: "US45, type: vless, server: 188.114.98.159, port: 443, uuid: 995da843-51d3-470a-bc76-1794a46bb6f9, udp: true, tls: true, tfo: false, skip-cert-verify: true, network: ws, servername: cf.flcl.link, ws-opts: {path: /?ed=2048"", headers: {Host: cf.flcl.link}}}"
-
 proxy-groups:
   - name: 🚀 节点选择
     type: select
